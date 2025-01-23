@@ -26,3 +26,16 @@ const registry = new containerregistry.Registry(`${prefixName}ACR`, {
     name: containerregistry.SkuName.Basic,
   },
 })
+
+// Get the authentication credentials for the container registry.
+const registryCredentials = containerregistry
+  .listRegistryCredentialsOutput({
+    resourceGroupName: resourceGroup.name,
+    registryName: registry.name,
+  })
+  .apply((creds) => {
+    return {
+      username: creds.username!,
+      password: creds.passwords![0].value!,
+    }
+  })
