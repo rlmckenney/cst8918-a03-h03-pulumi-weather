@@ -4,22 +4,6 @@ import * as containerregistry from '@pulumi/azure-native/containerregistry'
 // Other imports at the top of the module
 import * as docker from '@pulumi/docker'
 
-// ... rest of the code
-
-// Define the container image for the service.
-const image = new docker.Image(`${prefixName}-image`, {
-  imageName: pulumi.interpolate`${registry.loginServer}/${imageName}:${imageTag}`,
-  build: {
-    context: appPath,
-    platform: 'linux/amd64',
-  },
-  registry: {
-    server: registry.loginServer,
-    username: registryCredentials.username,
-    password: registryCredentials.password,
-  },
-})
-
 // Import the configuration settings for the current stack.
 const config = new pulumi.Config()
 const appPath = config.require('appPath')
@@ -57,3 +41,16 @@ const registryCredentials = containerregistry
     }
   })
  
+// Define the container image for the service.
+const image = new docker.Image(`${prefixName}-image`, {
+  imageName: pulumi.interpolate`${registry.loginServer}/${imageName}:${imageTag}`,
+  build: {
+    context: appPath,
+    platform: 'linux/amd64',
+  },
+  registry: {
+    server: registry.loginServer,
+    username: registryCredentials.username,
+    password: registryCredentials.password,
+  },
+})
