@@ -1,6 +1,6 @@
 config:
   cst8918-a03-infra:weatherApiKey:
-    secure: AAABAGSN75P6tK0M4LFobNFZTM+DuM4j2vf+17fSgvkadVN040LB5kDcmnWJn9XSj/SEb8w+xtwlMMPqAjCe
+    secure: AAABAKzAho3d3LU2owuJnpP+u9oWfLXTKldXe4IqrFsERnTgEtcZm/HoSYVd0hJslOO6XG+JrmidNW8VG0tI
   cst8918-a03-infra:appPath: ../
   azure-native:location: westus3
   cst8918-a03-infra:containerPort: "80"
