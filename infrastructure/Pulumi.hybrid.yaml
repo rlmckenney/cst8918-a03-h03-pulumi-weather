@@ -1,0 +1,11 @@
+config:
+  cst8918-a03-infra:weatherApiKey:
+    secure: AAABAGSN75P6tK0M4LFobNFZTM+DuM4j2vf+17fSgvkadVN040LB5kDcmnWJn9XSj/SEb8w+xtwlMMPqAjCe
+  cst8918-a03-infra:appPath: ../
+  azure-native:location: westus3
+  cst8918-a03-infra:containerPort: "80"
+  cst8918-a03-infra:publicPort: "80"
+  cst8918-a03-infra:cpu: "1"
+  cst8918-a03-infra:memory: "2"
+  cst8918-a03-infra:prefixName: cst8918-a03-neetika15122
+  cst8918-a03-infra:imageTag: v0.1.0
