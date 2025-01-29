@@ -1,0 +1,3 @@
+config:
+  cst8918-a03-infra:weatherApiKey:
+    secure: AAABACvAg0I9fWc8qzHtyyJRA5dsS7zcczy/JVae+9alfVv34+emyJf3YW62y3AzOoGWPNnjoN7twMRqZBhfJg==
