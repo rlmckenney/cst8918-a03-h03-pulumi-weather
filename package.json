@@ -11,13 +11,16 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@pulumi/azure-native": "^2.84.0",
+    "@pulumi/docker": "^4.6.1",
     "@remix-run/css-bundle": "^2.4.1",
     "@remix-run/node": "^2.4.1",
     "@remix-run/react": "^2.4.1",
     "@remix-run/serve": "^2.4.1",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "redis": "^4.7.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.4.1",

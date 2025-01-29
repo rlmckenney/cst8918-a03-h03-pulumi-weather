@@ -37,6 +37,7 @@ export async function loader() {
 
 export default function CurrentConditions() {
   const { currentConditions } = useLoaderData<typeof loader>()
+  console.log(currentConditions)
   const weather = currentConditions.weather[0]
   return (
     <>
@@ -75,7 +76,7 @@ export default function CurrentConditions() {
           }}
         >
           {capitalizeFirstLetter(weather.description)}. Feels like{' '}
-          {currentConditions.main['feels_like'].toFixed(1)}°C.
+          {currentConditions.main.['feels_like'].toFixed(1)}°C.
           <br />
           <span style={{ color: 'hsl(220, 23%, 60%)', fontSize: '0.85rem' }}>
             updated at{' '}
