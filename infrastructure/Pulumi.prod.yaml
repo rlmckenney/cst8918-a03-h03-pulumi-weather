@@ -7,3 +7,5 @@ config:
   cst8918-a03-infra:memory: '2'
   cst8918-a03-infra:prefixName: 'cst8918a03suna0011yaotina'
   cst8918-a03-infra:imageTag: 'v0.2.0'
+  cst8918-a03-infra:weatherApiKey:
+    secure: AAABAD2ZuU1SAmKDxa92DO9uNIY+7K4ReIHrEhBukp2cHuyx9K8wQTvsD7eZquAHjxoVWMC3kBwnWqs7fzPMUw==
